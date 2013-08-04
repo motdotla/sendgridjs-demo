@@ -8,7 +8,7 @@ var email = {
   handler: function (request) {
     var payload   = request.payload;
 
-    console.log("Email route had payload: " + payload);
+    console.log(payload);
 
     request.reply({ success: true });
   }
