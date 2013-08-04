@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dollar Dollar Club</title>
+
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+  <link rel="stylesheet" href="stylesheets/application.css" type="text/css">
+  <script src="javascripts/jquery.js"></script>
+</head>
+<body>
+  <div class="pure-g-r">
+    <div class="pure-u-1-6">
+    </div>
+
+    <div class="pure-u-2-3">
+      <div class="header">
+        <h1>Dollar Dollar Club</h1>
+        <h2>For $1/month, we send you 1 glorious piece of copper a day!</h2>
+      </div>
+
+      <div class="content">
+        <p>
+          &nbsp;
+        </p>
+        <form class="pure-form-stacked dollar-signup">
+          <input id="email" type="email" placeholder="Email">
+
+          <button type="submit" class="pure-button pure-button-primary">Sign me up!</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function() {
+      var $form = $("form");
+      $form.submit(function(e) {
+        e.preventDefault();
+
+        alert("Signed up!");
+      });
+    }); 
+  </script>
+</body>
+</html>
