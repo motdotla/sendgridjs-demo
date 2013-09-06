@@ -1,6 +1,7 @@
 // Setup Hapi Server
 var Hapi        = require('hapi');
 var port        = parseInt(process.env.PORT) || 3000;
+var sendgrid    = require('sendgrid')('penn', 'apps');
 server          = new Hapi.Server(+port, '0.0.0.0', { cors: true });
 
 // Build Route

@@ -37,8 +37,12 @@
       var $form = $("form");
       $form.submit(function(e) {
         e.preventDefault();
-
-        alert("Thanks for signing up!");
+        var email   = $("#email").val();
+        var payload = {to: email};
+        $.post("http://localhost:3000/email", payload, function(resp) {
+          console.log(resp);
+          alert("Thanks for signing up!");
+        }); 
       });
     }); 
   </script>
